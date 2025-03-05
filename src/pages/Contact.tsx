@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send, MessageSquare, Clock, CheckCircle } from "lucide-react";
+import { Mail, MapPin, Phone, Send, MessageSquare, Clock, CheckCircle, Camera } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";

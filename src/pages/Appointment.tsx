@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CalendarIcon, Clock, Camera, CheckCircle, Calendar } from "lucide-react";
+import { CalendarIcon, Clock, CheckCircle, CalendarDays } from "lucide-react";
 import { format } from "date-fns";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -268,7 +268,7 @@ const Appointment = () => {
                 
                 <div className="pt-4">
                   <Button type="submit" className="w-full md:w-auto rounded-full button-shine" size="lg">
-                    <Calendar className="mr-2 h-4 w-4" />
+                    <CalendarDays className="mr-2 h-4 w-4" />
                     Request Appointment
                   </Button>
                 </div>
