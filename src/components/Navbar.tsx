@@ -37,27 +37,44 @@ const Navbar = () => {
         {/* Logo */}
         <Link 
           to="/" 
-          className="flex items-center gap-2 text-2xl font-semibold font-heading"
+          className={`flex items-center gap-2 text-2xl font-semibold font-heading ${
+            isScrolled ? "text-foreground" : "text-white"
+          }`}
         >
           <span className="text-primary">Snap</span>
-          <span className="text-foreground">book</span>
+          <span className={isScrolled ? "text-foreground" : "text-white"}>book</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className={`navbar-link ${isActive("/") ? "navbar-link-active" : ""}`}>
+          <Link 
+            to="/" 
+            className={`navbar-link ${isScrolled ? "text-foreground" : "text-white"} ${isActive("/") ? "navbar-link-active" : ""}`}
+          >
             Home
           </Link>
-          <Link to="/photographers" className={`navbar-link ${isActive("/photographers") ? "navbar-link-active" : ""}`}>
+          <Link 
+            to="/photographers" 
+            className={`navbar-link ${isScrolled ? "text-foreground" : "text-white"} ${isActive("/photographers") ? "navbar-link-active" : ""}`}
+          >
             Photographers
           </Link>
-          <Link to="/appointment" className={`navbar-link ${isActive("/appointment") ? "navbar-link-active" : ""}`}>
+          <Link 
+            to="/appointment" 
+            className={`navbar-link ${isScrolled ? "text-foreground" : "text-white"} ${isActive("/appointment") ? "navbar-link-active" : ""}`}
+          >
             Appointment
           </Link>
-          <Link to="/albums" className={`navbar-link ${isActive("/albums") ? "navbar-link-active" : ""}`}>
+          <Link 
+            to="/albums" 
+            className={`navbar-link ${isScrolled ? "text-foreground" : "text-white"} ${isActive("/albums") ? "navbar-link-active" : ""}`}
+          >
             Albums
           </Link>
-          <Link to="/contact" className={`navbar-link ${isActive("/contact") ? "navbar-link-active" : ""}`}>
+          <Link 
+            to="/contact" 
+            className={`navbar-link ${isScrolled ? "text-foreground" : "text-white"} ${isActive("/contact") ? "navbar-link-active" : ""}`}
+          >
             Contact
           </Link>
           <Button size="sm" className="ml-4 rounded-full px-6 button-shine">
@@ -67,7 +84,9 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex items-center justify-center h-10 w-10 text-foreground"
+          className={`md:hidden flex items-center justify-center h-10 w-10 ${
+            isScrolled ? "text-foreground" : "text-white"
+          }`}
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >

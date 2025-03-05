@@ -76,10 +76,11 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button size="lg" className="rounded-full px-8 py-6 bg-white text-black hover:bg-white/90 button-shine">
-              Book a Photographer Now
-            </Button>
-            <Button variant="outline" size="lg" className="rounded-full px-8 py-6 border-white text-white hover:bg-white/10">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="rounded-full px-8 py-6 bg-white text-black hover:bg-transparent hover:text-white border-white transition-colors"
+            >
               Explore Portfolios
             </Button>
           </motion.div>
